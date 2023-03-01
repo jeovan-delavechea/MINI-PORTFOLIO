@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
 
     <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/estilos.css">
     <link rel="stylesheet" href="src/css/rolagem.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 
     <title>Mini Portfólio - Jeovan Delavechea</title>
 </head>
+
 <body>
     <main class="cartao">
         <div class="minhas-informacoes">
             <img src="./src/imagens/Perfil-Jeovan_cropped.jpeg" alt="foto de perfil">
             <h1 class="nome">Jeovan Delavechea</h1>
-            <H2 class="cargo">Desenvolvedor Frontend Júnior</H2>
+            <H2 class="cargo"><span>Desenvolvedor Frontend</span></H2>
         </div>
 
         <div class="conteudo">
@@ -24,37 +28,117 @@
                 <li class="aba selecionado" id="sobre-mim">
                     <img src="./src/imagens/sobre.gif" alt="ícone de sobre mim">
                 </li>
+                <li class="aba expansivel" id="meus-projetos"><img src="./src/imagens/projeto.gif" alt=""></li>
                 <li class="aba" id="minhas-redes">
                     <img src="./src/imagens/coracao.gif" alt="ícone de coração">
                 </li>
-            </ul> 
+            </ul>
 
             <div class="informacoes-abas">
                 <div class="informacao selecionado" id="informacao-sobre-mim">
                     <h3 class="sub-titulo">Sobre</h3>
 
                     <div class="descricao">
-                        <p>Oi! Meu nome é Jeovan Delavechea e seja bem-vindo(a)!</p>
-
+                        <p>Oi! Meu nome é <span>Jeovan Delavechea</span> e seja bem-vindo(a)!</p>
+                        <br><br>
                         <p>
-                            Conheci a programação há pouco tempo e simplesmente me apaixonei. Sempre admirei, sem saber, o
-                            trabalho feito pelos desenvolvedores através das páginas web em que visitava, e comecei 
-                            a estudar <span>HTML, CSS e JavaScript</span> para também fazer parte desse grupo. 
-                            Gosto muito de café (meu vício sem açúcar), e meus principais hobbies são tocar 
-                            música (trabalhei também um bom tempo com isso), ver animes e filmes.
+                            Na busca de desenvolver um portfólio para
+                            divulgar meu projetos com música, me deparei
+                            com o <span>desenvolvimento web</span> através de um
+                            anúncio. O que eu não esperava era me apaixonar
+                            tanto por essa área a ponto de resolver investir
+                            tanto assim nela.
+                            <br><br>
+                            Hoje <span>tenho gosto pelo que faço</span>, e busco uma
+                            oportunidade para contribuir com uma ótima
+                            equipe e aprender cada vez mais humana e
+                            profissinalmente.
+                            <br><br>
+                            Gosto muito de <span>café</span> (meu vício sem açúcar), e meus principais hobbies são
+                            <span>ler</span>, <span>ver animes e filmes</span>.
                         </p>
                     </div>
                 </div>
 
+                <div class="informacao ativo" id="informacao-meus-projetos">
+                    <h3 class="sub-titulo">Projetos</h3>
+
+                    <div class="projetos">
+                        <div class="slider-projetos" id="#slider">
+                            <div class="box-projeto ativo">
+                                <a href="https://jeovan-delavechea.github.io/quest-js-avancado-github-api-search/"
+                                    target="_blank" class="link-img-projeto">
+                                    <img src="./src/gif/searchapi.gif" alt="gif página de busca com API do GitHub">
+                                </a>
+                                <div class="titulo-link">
+                                    <h4>GitHub API Search</h4>
+                                    <a href="https://github.com/jeovan-delavechea/quest-js-avancado-github-api-search"
+                                        target="_blank">
+                                        <i class="devicon-github-original"></i>
+                                    </a>
+                                </div>
+                                <p class="descricao">Projeto desenvolvido no curso DevQuest como avaliação, cujo intuito
+                                    é apresentar, por meio de uma busca, certos elementos do perfil de um usuário da
+                                    plataforma.</p>
+                                <p class="linguagens">HTML - CSS - JavaScript</p>
+                            </div>
+
+                            <div class="box-projeto">
+                                <a href="https://jeovan-delavechea.github.io/selecao-personagens-marvel/"
+                                    target="_blank" class="link-img-projeto">
+                                    <img src="./src/gif/marvel.gif" alt="gif seleção de personagens marvel">
+                                </a>
+                                <div class="titulo-link">
+                                    <h4>Seleção de personagens Marvel</h4>
+                                    <a href="https://github.com/jeovan-delavechea/quest-js-avancado-github-api-search"
+                                        target="_blank">
+                                        <i class="devicon-github-original"></i>
+                                    </a>
+                                </div>
+                                <p class="descricao">Projeto desenvolvido no curso DevQuest que busca mudar o avatar e o
+                                    nome do personagem conforme o mouse passar por cima da sua imagem na grade.</p>
+                                <p class="linguagens">HTML - CSS - JavaScript</p>
+                            </div>
+
+                            <div class="box-projeto">
+                                <a href="https://jeovan-delavechea.github.io/02-app-gerador-conselhos/" target="_blank"
+                                    class="github">
+                                    <img src="./src/gif/advisorapi.gif" alt="gif app gerador de conselho">
+                                </a>
+                                <div class="titulo-link">
+                                    <h4>App gerador de conselho</h4>
+                                    <a href="https://github.com/jeovan-delavechea/quest-js-avancado-github-api-search"
+                                        target="_blank">
+                                        <i class="devicon-github-original"></i>
+                                    </a>
+                                </div>
+                                <p class="descricao">Projeto de um desafio da plataforma Frontend Mentor, desenvolvido
+                                    no curso DevQuest, cujo intuito é mudar o conselho conforme o clique no botão.</p>
+                                <p class="linguagens">HTML - CSS - JavaScript</p>
+                            </div>
+                        </div>
+
+                        <div class="navegacao">
+                            <button class="botao-navegacao desativado" id="esquerdo">&lt;</button>
+
+                            <div class="caixas-container">
+                            </div>
+
+                            <button class="botao-navegacao" id="direito">&gt;</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="informacao" id="informacao-minhas-redes">
                     <h3 class="sub-titulo">Minhas redes</h3>
 
-                    <ul class="redes-sociais">
+                    <ul class="descricao redes-sociais">
                         <li>
-                            <a href="" target="_blank" class="curriculo">Currículo</a>
+                            <a href="https://drive.google.com/file/d/1pEEXiTXtCh7K92u3GGH7qp94_3n2Fr7Q/view?usp=share_link"
+                                target="_blank" class="curriculo">Currículo</a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/jeovan-delavechea-7682b8253/" target="_blank" class="linkedin">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/jeovan-delavechea/" target="_blank"
+                                class="linkedin">LinkedIn</a>
                         </li>
                         <li>
                             <a href="https://github.com/jeovan-delavechea" target="_blank" class="github">GitHub</a>
@@ -63,8 +147,11 @@
                 </div>
             </div>
         </div>
+        </div>
     </main>
 
     <script type="text/javascript" src="./src/js/index.js"></script>
+    <script src="src/js/slider.js"></script>
 </body>
+
 </html>

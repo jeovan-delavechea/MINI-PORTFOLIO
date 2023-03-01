@@ -1,35 +1,48 @@
-//Passo 1 - Dar um jeito de pegar os elementos que representam as abas no html
 const abas = document.querySelectorAll(".aba");
-
-// Passo 2 - dar um jeito de identificar o clique no elemento aba 
+const abasExpansiveis = document.querySelectorAll(".expansivel");
+const conteudo = document.querySelector(".conteudo");
+const minhasInformacoes = document.querySelector(".minhas-informacoes");
 abas.forEach(aba => {
-    aba.addEventListener("click", function(){
-        
-        if(aba.classList.contains("selecionado")){return;}
+  aba.addEventListener("click", function () {
+    
+    if (aba.classList.contains("selecionado")) {
+      return;
+    }
 
-        selecionarAba(aba)
-
-        mostrarInformacoesDaAba(aba)
-    })
+    selecionarAba(aba);
+    mostrarInformacoesDaAba(aba);
+  })
 })
 
-function selecionarAba(aba){
-    // passo 3 - quando o usuário clicar, desmarcar a aba selecionada
-    const abaSelecionada = document.querySelector(".aba.selecionado")
-    abaSelecionada.classList.remove("selecionado");
+abasExpansiveis.forEach(aba => {
+  aba.addEventListener("click", function () {
 
-    // passo 4 - marcar a aba clicada como selecionado
-    aba.classList.add("selecionado");
+    if(conteudo.classList.contains("expandido")) {
+      return;
+    }
+      
+    expandirAba();
+  })
+})
+
+function selecionarAba(aba) {
+  const abaSelecionada = document.querySelector(".aba.selecionado");
+  conteudo.classList.remove("expandido");
+  minhasInformacoes.classList.remove("escondido");
+  abaSelecionada.classList.remove("selecionado");
+  aba.classList.add("selecionado");
 }
 
-function mostrarInformacoesDaAba(aba){
-    // passo 5 - esconder o conteúdo anterior
-    const informacaoSelecionada = document.querySelector(".informacao.selecionado");
-    informacaoSelecionada.classList.remove("selecionado");
+function mostrarInformacoesDaAba(aba) {
+  const informacaoSelecionada = document.querySelector(".informacao.selecionado");
+  informacaoSelecionada.classList.remove("selecionado");
 
-    // passo 6 - mostrar o conteúdo da aba selecionada
-    const idDoElementoDeInformacoesDaAba = `informacao-${aba.id}`
+  const idDoElementoDeInformacoesDaAba = `informacao-${aba.id}`;
+  const informacaoAserMostrada = document.getElementById(idDoElementoDeInformacoesDaAba);
+  informacaoAserMostrada.classList.add("selecionado");
+}
 
-    const informacaoASerMostrada = document.getElementById(idDoElementoDeInformacoesDaAba)
-    informacaoASerMostrada.classList.add("selecionado")
+function expandirAba() {
+  conteudo.classList.add("expandido");
+  minhasInformacoes.classList.add("escondido");
 }
