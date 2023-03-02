@@ -46,18 +46,24 @@ body{
 
 .cartao .minhas-informacoes.escondido{
     display: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .cartao .minhas-informacoes .nome{
     font-size: 26px;
 }
 
+.cartao .minhas-informacoes .cargo{
+    text-align: center;
+}
+
 .cartao .conteudo{
-    margin: 5px;
+    margin: 6px;
 }
 
 .cartao .conteudo.expandido{
-    animation: slide-up 3s ease-in-out;
+    animation-duration: 0.6s;
+    animation-name: slide-up;
 }
 
 .cartao .conteudo .informacoes-abas{
@@ -100,7 +106,6 @@ body{
     min-height: 285px;
     padding: 15px;
     display: none;
-    border-radius: 10px;
 }
 
 .informacoes-abas .informacao.selecionado {
@@ -134,12 +139,14 @@ span {
 .box-projeto a img{
     width: 100%;
     height: 150px;
-    border-radius: 8px;
+    border-radius: 5px;
+    border: 2px solid var(--selec-color);
+    position: relative;
 }
 
 .box-projeto{
-    background-color: #1c1b0acf;
-    border: 1px solid var(--borda-cartao);
+    background-color: var(--fundo-aba);
+    border: 2px solid var(--borda-cartao);
     border-radius: 8px;
     display: none;
     min-height: 380px;
@@ -154,11 +161,12 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 15px 0;
+    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 .box-projeto h4{
-    font-size: 1.2em;
+    font-size: calc(100%);
     color: #f5f3be;
 }
 .box-projeto a .devicon-github-original{
@@ -170,9 +178,8 @@ span {
 }
 
 .box-projeto .descricao{
-    background-color: #565f0585;
+    background-color: var(--cor-fundo);
     border-radius: 8px;
-    margin: 15px 0;
     padding: 5px;
     max-height: 92px;
 }
@@ -180,7 +187,7 @@ span {
 .box-projeto .linguagens{
     color: #aab736;
     text-align: end;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .slider-projetos{
@@ -191,25 +198,27 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 14px;
     width: 100%;
 }
 
 .projetos .navegacao .botao-navegacao.desativado{
-    background-color: rgba(65, 103, 90, 0.281);
+    background-color: var(--cor-fundo);
 }
 .projetos .navegacao .botao-navegacao{
     color: #f3f3f3;
     font-size: 20px;
-    background-color: rgb(65, 103, 90);
+    background-color: var(--fundo-aba);
     border: none;
-    padding: 3px;
-    border-radius: 9px;
+    width: 25px;
+    border-radius: 50%;
+    opacity: 0.9;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 .projetos .navegacao .botao-navegacao:hover{
     transform: scale(1.1);
+    background-color: var(--selec-color);
 }
 
 .projetos .navegacao .caixas-container{
@@ -217,21 +226,22 @@ span {
     gap: 8px;
 }
 
-.projetos .navegacao .caixas-container .caixa{
+.caixa{
     display: block;
-    background-color: #0f100e;
+    background-color: var(--fundo-aba);
     width: 15px;
     height: 15px;
-    border: 1px solid #000;
+    border: 1px solid #0c0a0a;
     border-radius: 4px;
+    transition: 0.3 ease-in-out;
 }
 
 .caixa.ativo{
-    background-color: rgb(37, 137, 107);
+    background-color: var(--selec-color);
 }
 
-.projetos .navegacao .caixas-container .caixa:hover{
-    background-color: rgb(37, 137, 107);
+.caixa:hover{
+    background-color: var(--selec-color);
     cursor: pointer;
 }
 
@@ -242,9 +252,12 @@ span {
     align-items: center;
 }
 
+.redes-sociais li{
+    width: 100%;
+}
+
 .redes-sociais li a {
     display: block;
-    width: 250px;
     color: #f3f3f3;
     text-align: center;
     padding: 10px;
@@ -254,16 +267,21 @@ span {
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
+
 .redes-sociais .curriculo {
     background-color: var(--green-c);
 }
-
 .redes-sociais .linkedin {
     background-color: var(--blue-l);
 }
-
 .redes-sociais .github {
     background-color: var(--cinza-g);
+}
+.redes-sociais .whatsapp {
+    background-color: var(--green-w);
+}
+.redes-sociais .gmail {
+    background-color: var(--red-g);
 }
 
 .redes-sociais li a:hover {

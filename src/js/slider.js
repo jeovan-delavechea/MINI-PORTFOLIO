@@ -56,7 +56,7 @@ function mostrarSlide(id) {
 }
 
 function ativarcaixa(id) {
-    const caixas = slider.querySelectorAll(".caixa");
+    const caixas = projetos.querySelectorAll(".caixa");
 
     for(let i = 0; i < caixas.length; i++) {
         if (i == id) {
