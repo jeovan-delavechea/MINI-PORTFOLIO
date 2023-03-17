@@ -1,0 +1,110 @@
+.box-projeto{
+    background-color: var(--fundo-aba);
+    border: 2px solid var(--borda-cartao);
+    border-radius: 8px;
+    display: none;
+    min-height: 380px;
+}
+.box-projeto.ativo{
+    display: block;
+    padding: 5px;
+}
+
+.box-projeto a img{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border: 2px solid var(--selec-color);
+    transition: 0.15s ease-in-out;
+}
+
+.box-projeto a img:hover{
+    opacity: 0.5;
+}
+
+.box-projeto .titulo-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.box-projeto h4{
+    font-size: calc(100%);
+    color: #f5f3be;
+}
+.box-projeto a .devicon-github-original{
+    color: #f3ba64;
+}
+.box-projeto a .devicon-github-original:hover{
+    color: #af6e0c;
+}
+
+.box-projeto .descricao{
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    padding: 5px;
+    max-height: 92px;
+}
+
+.box-projeto .linguagens{
+    color: #aab736;
+    text-align: end;
+    margin-top: 25px;
+}
+
+.slider-projetos{
+    display: flex;
+}
+
+.projetos .navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    width: 100%;
+}
+
+.projetos .navegacao .botao-navegacao.desativado{
+    background-color: var(--cor-fundo);
+}
+.projetos .navegacao .botao-navegacao{
+    color: #f3f3f3;
+    font-size: 20px;
+    background-color: var(--fundo-aba);
+    border: none;
+    width: 25px;
+    border-radius: 50%;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+}
+.projetos .navegacao .botao-navegacao.ativado:hover{
+    transform: scale(1.1);
+    background-color: var(--selec-color);
+    cursor: pointer;
+}
+
+.projetos .navegacao .caixas-container{
+    display: flex;
+    gap: 8px;
+}
+
+.caixa{
+    display: block;
+    background-color: var(--fundo-aba);
+    width: 15px;
+    height: 15px;
+    border: 1px solid #0c0a0a;
+    border-radius: 4px;
+    transition: 0.3 ease-in-out;
+}
+
+.caixa.ativo{
+    background-color: var(--selec-color);
+}
+
+.caixa:hover{
+    background-color: var(--selec-color);
+    cursor: pointer;
+}

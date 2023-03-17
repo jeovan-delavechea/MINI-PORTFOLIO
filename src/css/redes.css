@@ -1,0 +1,42 @@
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.redes-sociais li{
+    width: 100%;
+}
+
+.redes-sociais li a {
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.redes-sociais .curriculo {
+    background-color: var(--green-c);
+}
+.redes-sociais .linkedin {
+    background-color: var(--blue-l);
+}
+.redes-sociais .github {
+    background-color: var(--cinza-g);
+}
+.redes-sociais .whatsapp {
+    background-color: var(--green-w);
+}
+.redes-sociais .gmail {
+    background-color: var(--red-g);
+}
+
+.redes-sociais li a:hover {
+    transform: scale(1.02);
+}

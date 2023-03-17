@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('./fonts/VT323-Regular.ttf');
+}
+
+body{
+    background-image: url(../imagens/wallpaperflare.com_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: 'VT323', monospace;
+    color: #f3f3f3;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.cartao{
+    width: 400px;
+    height: 565px;
+    border: 2px solid var(--fundo-aba);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--cor-fundo);
+    backdrop-filter: blur(1.5px);
+}
+
+.cartao .minhas-informacoes img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 2.5px solid var(--fundo-aba);
+}
+
+
+.cartao .minhas-informacoes{
+    padding-top: 15px;
+    padding-bottom: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cartao .minhas-informacoes.escondido{
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartao .minhas-informacoes .nome{
+    font-size: 26px;
+}
+
+.cartao .minhas-informacoes .cargo{
+    text-align: center;
+}
+
+.cartao .conteudo{
+    margin: 6px;
+}
+
+.cartao .conteudo.expandido{
+    animation-duration: 0.6s;
+    animation-name: slide-up;
+}
+
+.cartao .conteudo .informacoes-abas{
+    background-color: var(--fundo-info);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.abas img{
+    width: 25px;
+}
+
+.cartao .abas{
+    display: flex;
+    min-height: 45px;
+}
+
+.cartao .abas .aba{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;    
+}
+
+.cartao .abas .aba.selecionado{
+    background-color: var(--fundo-info);
+}
+
+.cartao .abas .aba:hover{
+    background-color: var(--fundo-aba);
+    margin-bottom: 3px;
+    padding: 8px 0;
+    border-radius: 8px;
+}
+
+.informacoes-abas .informacao{
+    min-height: 285px;
+    padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .informacao.selecionado {
+    display: block;
+}
+
+.informacoes-abas .sub-titulo {
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--fundo-aba);
+    border-radius: 8px;
+}
+
+.informacoes-abas .descricao {
+    font-size: 20px;
+    max-height: 188px;
+    overflow-y: auto;
+    padding-right: 15px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.informacao.ativo .sub-titulo{
+    margin-bottom: 15px;
+}

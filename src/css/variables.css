@@ -1,7 +1,7 @@
 :root{
     
-    --borda-cartao: #c5c94ad3;
-    --borda-perfil: rgb(206, 229, 241);
+    --borda-cartao: #0a0d08d3;
+    --borda-perfil: rgb(38, 51, 44);
     
     --green: #06be84;
     --green-c: #06c185;
@@ -15,4 +15,8 @@
     --fundo-info: #09130b96;
 
     --selec-color: rgb(37, 137, 107);
+}
+
+span {
+    color: var(--green);
 }

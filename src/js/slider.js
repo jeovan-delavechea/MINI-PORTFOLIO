@@ -69,16 +69,20 @@ function ativarcaixa(id) {
 
 function checarBotaoEsquerdo() {
     if (index > 0) {
+        botaoEsquerdo.classList.add('ativado');
         botaoEsquerdo.classList.remove("desativado");
     } else if (index == 0) {
+        botaoEsquerdo.classList.remove('ativado');
         botaoEsquerdo.classList.add("desativado");
     }
 }
 
 function checarBotaoDireito() {
     if (index < quantiaboxes - 1) {
+        botaoDireito.classList.add('ativado');
         botaoDireito.classList.remove("desativado");
     } else if (index == quantiaboxes - 1) {
+        botaoDireito.classList.remove('ativado');
         botaoDireito.classList.add("desativado");
     }
 }
